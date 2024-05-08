@@ -19,9 +19,10 @@ body {
 }
 
 /*---------------Landing page section*/
-#quiz-container {
+.quiz-container {
+    /*---------------flex to Push container down*/
     flex: 1 0 auto;
-    margin: 0 60px 60px;
+    margin: 0 20px 20px;
     border-radius: 10px;
     max-height: 1000px;
     transition: max-height 1.5s;
@@ -49,26 +50,58 @@ body {
 .menu-buttons {
     font-size: larger;
     margin-top: 5rem;
-    float: right; 
+    float: right;
+    display: flex; 
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+}
+
+.menu-btn {
+    margin-bottom: 20px;
+    
 }
 
 .welcome-text {
+    padding-top: 60px;
     display: flex;
-    justify-content: center;
-    
+    align-items: center;
 }
-    
+/*-----Please enter username text*/
+.username-text {
+    padding:  15px 15px;
+    display: flex;
+    align-items: center;
+}
+::placeholder {
+    text-align: center;
+}
+
+.input-username {
+    padding: 40px 50px;
+}
+
+.next-btn {
+    margin: 20px 80px;
+    width: 100px;
+    background-color: aquamarine;
+}
 
 
 
-
+/*---------------Instruction area section*/
+.inst-section {
+    display: none;
+}
 
 
 
 
 
 /*---------------Question area section*/
-
+#hide-question-area {
+    display: none;
+}
 
 
 
@@ -76,3 +109,6 @@ body {
 
 
 /*---------------Result area section*/
+#hide-result-section {
+    display: none;
+}
