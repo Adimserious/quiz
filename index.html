@@ -29,13 +29,13 @@
                     <button class="menu-btn">Contact</button>
                 </div>
 
-                <div class="welcome-text">
-                    <p>Welcome to Apptitute Comprehension Test</p>
+                <div id="welcome-text">
+                    <p class="welcome">Welcome to Apptitute Comprehension Test</p>
                 </div>
 
                 <form action="" method="post">
-                    <div class="username-text">
-                        <p>Plese enter your username to continue</p>
+                    <div id="username-text">
+                        <p>Plese enter your name to continue</p>
                     </div>
                     <div class="input-username">
                         <input type="text" placeholder="Username" id="username" name="username" required>
@@ -85,6 +85,10 @@
         <section id="hide-question-area">
             <div class="quiz-container">
                 <!--Icons-->
+                <div class="home-menu-icon">
+                    <div class="home-icon"><i class="fa-solid fa-house"></i></div>
+                    <div class="drop-down-icon"><i class="fa-solid fa-bars"></i></div>
+                </div>
                 <div class="x-icon"><i class="fa-solid fa-x"></i></div>
                 <div class="current-question">
                     <div>0</div>
@@ -95,7 +99,7 @@
                 </div>
                 <div id="curnt-qstn-qstn-no-icons">
                     <div class="questn-no-icon"><i class="fa-solid fa-question"></i></div>
-                    <div class="current-qstn-count"> 1 0f 10</div>
+                    <div class="current-qstn-count"> 1/10</div>
                 </div>
 
                 <div id="fourth-menu-buttons">
@@ -116,7 +120,7 @@
                 </div>
 
                 <div>
-                    <button class="nxt-quest-btn"></button>
+                    <button class="next-btn">Next</button>
                 </div>
             </div>
         </section>
@@ -129,6 +133,10 @@
         <section id="hide-result-section">
             <div class="quiz-container">
                 <!--Icons-->
+                <div class="home-menu-icon">
+                    <div class="home-icon"><i class="fa-solid fa-house"></i></div>
+                    <div class="drop-down-icon"><i class="fa-solid fa-bars"></i></div>
+                </div>
                 <div id="fifth-menu-buttons">
                     <button class="menu-btn">Home</button>
                     <button class="menu-btn">Instructions</button>

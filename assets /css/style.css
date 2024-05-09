@@ -47,7 +47,6 @@ main {
     margin-top: 10px;
     font-size: 2rem;
     margin-left: 10px;
-    
 }
 
 .x-icon {
@@ -60,9 +59,9 @@ main {
     display: flex;
     flex-direction: row;
     float: left;
-    font-size: 2rem; 
-    min-height: 100vh;
-    margin-top: 200px;
+    margin-top: 230px;
+    font-size: 1.5rem;
+    width: 50px;
 }
 
 
@@ -70,8 +69,8 @@ main {
     display: flex;
     flex-direction: row;
     float: right;
-    margin-top: 200px;
-    font-size: 2rem;
+    margin-top: 230px;
+    font-size: 1.5rem;
 }
 
 .drop-down-icon {
@@ -81,19 +80,20 @@ main {
     font-size: 2rem;
 }
 
-/*---------------Button styles*/
+/*---------------Button styles for all sections*/
 #first-menu-buttons {
     font-size: larger;
-    margin-top: 5rem;
+    margin-top: 6rem;
     float: right;
     display: flex; 
     flex-direction: column;
     padding: 5px;
+    right: 30px;
 }
 
 #second-menu-buttons {
     font-size: larger;
-    margin-top: 5rem;
+    margin-top: 6rem;
     float: right;
     display: flex; 
     flex-direction: column;
@@ -102,7 +102,7 @@ main {
 
 #third-menu-buttons {
     font-size: larger;
-    margin-top: 5rem;
+    margin-top: 6rem;
     float: right;
     display: flex; 
     flex-direction: column;
@@ -113,7 +113,7 @@ main {
 
 #fourth-menu-buttons {
     font-size: larger;
-    margin-top: 5rem;
+    margin-top: 6rem;
     float: right;
     display: flex; 
     flex-direction: column;
@@ -124,15 +124,16 @@ main {
 
 #fifth-menu-buttons {
     font-size: larger;
-    margin-top: 5rem;
+    margin-top: 6rem;
     float: right;
     display: flex; 
     flex-direction: column;
     padding: 5px;
 }
-
+/*---All menu styles*/
 .menu-btn {
     margin-top: 20px;
+    display: none;
 }
 
 /*---------------start and exit buttons*/
@@ -141,17 +142,24 @@ main {
 }
 
 /*---------------Welcome text styles*/
-.welcome-text {
+#welcome-text {
     padding-top: 60px;
     display: flex;
     align-items: center;
+    white-space: pre-wrap;
+    text-align: center;
+}
+.welcome {
+    margin-right: 20px;
+    
 }
 
 /*-----Please enter username text*/
-.username-text {
+#username-text {
     padding:  15px 15px;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 ::placeholder {
     text-align: center;
@@ -161,6 +169,7 @@ main {
     padding: 40px 50px;
 }
 
+/*---Home Next button and next question button stles*/
 .next-btn {
     margin: 20px 80px;
     width: 100px;
@@ -169,7 +178,7 @@ main {
 
 /*---------------Landing page section*/
 #landing-page {
-    
+    display: none;
 }
 
 
@@ -186,7 +195,7 @@ main {
 
 /*---------------Question area section*/
 #hide-question-area {
-    display: none;
+    display: block;
 }
 
 
