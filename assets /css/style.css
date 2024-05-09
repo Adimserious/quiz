@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*--General body style*/
 body {
     background-color: aqua;
     color: aliceblue;
@@ -15,13 +15,22 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('../images/hero-image.jpg') no-repeat fixed center / cover;
+    background: url('../images/') no-repeat fixed center / cover;
 }
 
-/*---------------Landing page section*/
-.quiz-container {
-    /*---------------flex to Push container down*/
+header {
+    background-color: aquamarine;
+}
+
+main {
+    background-color: red;
+    /*---------------flex to take up surplus space down---*/
     flex: 1 0 auto;
+}
+
+
+/*---------------Quiz container styles*/
+.quiz-container {
     margin: 0 20px 20px;
     border-radius: 10px;
     max-height: 1000px;
@@ -31,6 +40,7 @@ body {
     margin-top: 20px;
 }
 
+/*---------------Icon styles*/
 .home-icon {
     float: left;
     margin-right: 10px;
@@ -40,6 +50,30 @@ body {
     
 }
 
+.x-icon {
+    float: right;
+    margin-right: 50px;
+    color: red;
+}
+
+#timer-count-timer-icons {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    font-size: 2rem; 
+    min-height: 100vh;
+    margin-top: 200px;
+}
+
+
+#curnt-qstn-qstn-no-icons {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-top: 200px;
+    font-size: 2rem;
+}
+
 .drop-down-icon {
     float: right;
     margin-right: 10px;
@@ -47,26 +81,72 @@ body {
     font-size: 2rem;
 }
 
-.menu-buttons {
+/*---------------Button styles*/
+#first-menu-buttons {
     font-size: larger;
     margin-top: 5rem;
     float: right;
     display: flex; 
     flex-direction: column;
-    padding: 20px;
-    display: none;
+    padding: 5px;
+}
+
+#second-menu-buttons {
+    font-size: larger;
+    margin-top: 5rem;
+    float: right;
+    display: flex; 
+    flex-direction: column;
+    padding: 5px;
+}
+
+#third-menu-buttons {
+    font-size: larger;
+    margin-top: 5rem;
+    float: right;
+    display: flex; 
+    flex-direction: column;
+    padding: 5px;
+}
+
+
+
+#fourth-menu-buttons {
+    font-size: larger;
+    margin-top: 5rem;
+    float: right;
+    display: flex; 
+    flex-direction: column;
+    padding: 5px;
+}
+
+
+
+#fifth-menu-buttons {
+    font-size: larger;
+    margin-top: 5rem;
+    float: right;
+    display: flex; 
+    flex-direction: column;
+    padding: 5px;
 }
 
 .menu-btn {
-    margin-bottom: 20px;
-    
+    margin-top: 20px;
 }
 
+/*---------------start and exit buttons*/
+#start-exit-div {
+    margin: 50px;
+}
+
+/*---------------Welcome text styles*/
 .welcome-text {
     padding-top: 60px;
     display: flex;
     align-items: center;
 }
+
 /*-----Please enter username text*/
 .username-text {
     padding:  15px 15px;
@@ -87,14 +167,20 @@ body {
     background-color: aquamarine;
 }
 
-
-
-/*---------------Instruction area section*/
-.inst-section {
-    display: none;
+/*---------------Landing page section*/
+#landing-page {
+    
 }
 
 
+/*---------------Instruction area section*/
+#inst-section {
+    display: none;
+}
+
+#contact-section {
+    display: none;
+}
 
 
 
@@ -111,4 +197,10 @@ body {
 /*---------------Result area section*/
 #hide-result-section {
     display: none;
+}
+
+
+
+footer {
+    background-color: blanchedalmond;
 }
