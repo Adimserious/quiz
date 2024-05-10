@@ -9,13 +9,11 @@
 }
 /*--General body style*/
 body {
-    background-color: aqua;
     color: aliceblue;
     font-family: "Exo" sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: url('../images/') no-repeat fixed center / cover;
 }
 
 header {
@@ -26,6 +24,7 @@ main {
     background-color: red;
     /*---------------flex to take up surplus space down---*/
     flex: 1 0 auto;
+    background: url('../images/pexels-newcar.jpg') no-repeat fixed center / cover;
 }
 
 
@@ -36,7 +35,7 @@ main {
     max-height: 1000px;
     transition: max-height 1.5s;
     overflow: hidden;
-    background-color: rgb(96, 96, 123);
+    background-color: transparent;
     margin-top: 20px;
 }
 
@@ -47,6 +46,7 @@ main {
     margin-top: 10px;
     font-size: 2rem;
     margin-left: 10px;
+    color: blanchedalmond;
 }
 
 .x-icon {
@@ -78,6 +78,7 @@ main {
     margin-right: 10px;
     margin-top: 10px;
     font-size: 2rem;
+    color: blanchedalmond;
 }
 
 /*---------------Button styles for all sections*/
@@ -177,42 +178,36 @@ main {
     background-color: aquamarine;
 }
 
+.quiz-container
+
+
 /*---------------Landing page section*/
 #landing-page {
     display: block;
 }
-
 
 /*---------------Instruction area section*/
 #inst-section {
     display: none;
 }
 
-#contact-section {
-    display: none;
-}
-
-
-
 /*---------------Question area section*/
 #hide-question-area {
     display: none;
 }
-
-
-
-
-
 
 /*---------------Result area section*/
 #hide-result-section {
     display: none;
 }
 
-
+/*---------------Contact area section*/
+#contact-section {
+    display: none;
+}
 
 footer {
-    background-color: blanchedalmond;
+    background-color: aquamarine;
 }
 
 /*---------------Media query*/
