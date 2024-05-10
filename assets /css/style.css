@@ -167,6 +167,7 @@ main {
 
 .input-username {
     padding: 40px 30px;
+    background-color: aqua;
 }
 
 /*---Home Next button renamed to start quiz in html and next question button */
@@ -257,27 +258,54 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+
+    .home-icon {
+        font-size: 4rem;
+    }
+
+    .drop-down-icon {
+        font-size: 4rem;
+    }
+
     .welcome {
-        font-size: 3rem;
-        margin-left: 50px 50px;
+        font-size: 4rem;
+        margin-top: 50px;
+        margin-left: 30px;
+        padding: 10px;
     }
     
     #username-text {
-        padding:  10px 70px;
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
+
+        margin-top: 40px;
+        margin-left: 40px;
+        padding: 30px; 
         font-size: 2.5rem;
     }
 
+    #username-text-paragh {
+        
+    }
+
     .input-username {
-        padding: 50px 250px;
-        font-size: 5rem;
+        padding: 50px 50px;
+        font-size: 1rem;
+        width: 50%;
+        margin-left: 150px;
+        margin-top: 80px;
+    
+        background-color: blanchedalmond;
+    }
+
+    input {
+        padding: 40px;
+        
     }
 
     ::placeholder {
         text-align: center;
-        font-size: 1rem;
+        font-size: 2rem;
+        text-decoration: none;
+        margin-left: 10px;
     }
 
     .next-btn {
@@ -285,5 +313,45 @@ footer {
         width: 100px;
         background-color: aquamarine;
         padding: 30px;
+        font: 1em sans-serif;
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .welcome {
+        font-size: 3rem;
+        margin-left: 50px 50px;
+    }
+    
+    #username-text {
+        background-color: aqua;
+        margin-right: 10px;
+        max-width: 80%;
+    }
+
+
+    .input-username {
+        background-color: blanchedalmond;
+    }
+
+    input {
+        padding: 40px;
+    }
+
+    ::placeholder {
+        text-align: center;
+        font-size: 2rem;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    .next-btn {
+        margin: 20px 270px;
+        width: 100px;
+        background-color: aquamarine;
+        padding: 30px;
+        font: 1em sans-serif;
+        margin-top: 60px;
     }
 }
