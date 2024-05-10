@@ -1,21 +1,52 @@
+
 const start = document.getElementById("start-btn");
 const questionAreaDiv = document.getElementById("questn-container");
 const currentQuestion = document.getElementsByClassName("current-question");
 const currentQuestionCount = document.getElementsByClassName("current-qstn-count");
 const questionDiv = document.getElementsByClassName("main-question-div");
 const questionText = document.getElementsByClassName("main-quest-text");
-const choiceA = document.getElementsByClassName("A");
-const choiceB = document.getElementsByClassName("B");
-const choiceC = document.getElementsByClassName("C");
+const choiceA = document.getElementById("A");
+const choiceB = document.getElementById("B");
+const choiceC = document.getElementById("C");
 const nextQuestion = document.getElementById("next-btn");
 const resultDiv = document.getElementById("result-container")
 const finalScore = document.getElementsByClassName("final-score-text")
 
 
+function nameValidation(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+
+    
+}
+
+function quizArea() {
+
+}
+
+function resultArea() {
+
+}
 
 
+// 
+function sayName(myUsername, myScore) {
+    return myUsername + myScore
+}
+let nameAndScore = [
+    {
+        username:finalScore
+    }
+]
+let result = [];
 
-
+// a for loop and function call will take specific username argument
+for (let name of nameAndScore) {
+    let specificResult = sayName();
+result.push(specificResult)
+}
+ console.log("result")
 
 
 

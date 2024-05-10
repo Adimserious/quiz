@@ -33,12 +33,13 @@
                     <p class="welcome">Welcome to the driving licence quiz</p>
                 </div>
 
-                <form action="" method="post">
+                <form action="" method="" onsubmit="quizArea()">
                     <div id="username-text">
                         <p id="username-text-paragh">Please enter your name to continue</p>
                     </div>
                     <div class="input-username">
-                        <input type="text" placeholder="Username" id="username" name="username" required>
+                        <label for="username"></label>
+                        <input type="text" placeholder="Username" id="username" name="username" maxlength="12" required>
                         <p id="user-msg" class="error-msg"></p><br>
                     </div>
                     <!---->
@@ -48,115 +49,6 @@
                 </form>
             </div>
         </section>
-
-
-        <!--Question area section-->
-        <section id="hide-question-area">
-            <div id="questn-container" class="quiz-container">
-                <!--Icons-->
-                <div class="home-menu-icon">
-                    <div class="home-icon"><i class="fa-solid fa-house"></i></div>
-                    <div class="drop-down-icon"><i class="fa-solid fa-bars"></i></div>
-                </div>
-                <div class="x-icon"><i class="fa-solid fa-x"></i></div>
-                
-                <div id="timer-count-timer-icons">
-                    <div class="timer-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
-                    <div class="timer-no-count">20s</div>
-                </div>
-                <div id="curnt-qstn-qstn-no-icons">
-                    <div class="questn-no-icon"><i class="fa-solid fa-question"></i></div>
-                    <div class="current-qstn-count">1/11</div>
-                </div>
-                <div class="current-question">
-                    <div>0</div>
-                </div>
-
-                <div class="main-question-div">
-                    <h2 class="main-quest-text"></h2>
-                </div>
-
-                <div class="answer-btn-div">
-                    <button class="ans-btn">A</button>
-                    <button class="ans-btn">B</button>
-                    <button class="ans-btn">C</button>
-                </div>
-
-                <div>
-                    <button id="next-btn" class="next-btn">Next</button>
-                </div>
-
-                <div id="fourth-menu-buttons">
-                    <button class="menu-btn">Home</button>
-                    <button class="menu-btn">Instructions</button>
-                    <button class="menu-btn">Contact</button>
-                </div>
-
-            </div>
-        </section>
-
-
-
-
-
-        <!--Result area section-->
-        <section id="hide-result-section">
-            <div id="result-container" class="quiz-container">
-                <!--Icons-->
-                <div class="home-menu-icon">
-                    <div class="home-icon"><i class="fa-solid fa-house"></i></div>
-                    <div class="drop-down-icon"><i class="fa-solid fa-bars"></i></div>
-                </div>
-                <div id="fifth-menu-buttons">
-                    <button class="menu-btn">Home</button>
-                    <button class="menu-btn">Instructions</button>
-                    <button class="menu-btn">Contact</button>
-                </div>
-
-                <div class="score-no-div">
-                    <p class="final-score-text"></p>
-                </div>
-                <div id="start-exit-div">
-                    <button aria-label="Start Again">start Again</button>
-                    <button aria-label="Exit Quiz">Exit-Quiz</button>
-                </div>
-            </div>
-        </section>
-
-
-        <!--Instruction section-->
-        <section id="inst-section">
-            <div class="quiz-container">
-                <!--Icons-->
-                <div class="home-icon"><i class="fa-solid fa-house"></i></div>
-                <div class="drop-down-icon"><i class="fa-solid fa-bars"></i></div>
-            </div>
-
-            <div id="second-menu-buttons">
-                <button class="menu-btn">Home</button>
-                <button class="menu-btn">Instructions</button>
-                <button class="menu-btn">Contact</button>
-            </div>
-        </section>
-
-
-        <!--Contact section-->
-        <section id="contact-section">
-            <div class="quiz-container">
-                <!--Icons-->
-                <div class="home-icon"><i class="fa-solid fa-house"></i></div>
-                <div class="drop-down-icon"><i class="fa-solid fa-bars"></i></div>
-            </div>
-
-            <div id="third-menu-buttons">
-                <button class="menu-btn">Home</button>
-                <button class="menu-btn">Instructions</button>
-                <button class="menu-btn">Contact</button>
-            </div>
-        </section>
-
-    </main>
-
 
 
     <!--Footer section-->
