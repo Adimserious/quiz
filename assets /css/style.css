@@ -191,7 +191,7 @@ main {
 
 /*---------------Question area section*/
 #questn-container {
-    display: block;
+    display: none;
 }
 
 /*---------------Result area section*/

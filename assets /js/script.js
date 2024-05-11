@@ -1,49 +1,46 @@
 
 const start = document.getElementById("start-btn");
-const questionAreaDiv = document.getElementById("questn-container");
 const currentQuestion = document.getElementsByClassName("current-question");
 const currentQuestionCount = document.getElementsByClassName("current-qstn-count");
-const questionDiv = document.getElementsByClassName("main-question-div");
-const question = document.getElementById("question");
-const choiceA = document.getElementById("A");
-const choiceB = document.getElementById("B");
-const choiceC = document.getElementById("C");
-const nextQuestion = document.getElementById("next-btn");
+
+
 const resultDiv = document.getElementById("result-container")
 const finalScore = document.getElementsByClassName("final-score-text")
 const username = document.getElementById("username").value;
 
+// Add a click event listener to start button so that it takes user to quiz area once clicked
+document.getElementById("start-btn").addEventListener("click", showQuizArea());
+let firstPage = document.getElementById("landing-page");
 
-document.getElementById("start-btn").addEventListener("click", showQuizArea())
 
-
-// 
-function hideLandingPage(event) {
-    event.preventDefault();
-    firstPage.style.maxHeight = ("0");
-    showQuizArea() 
-}
-
-hideLandingPage()
-
-licenceQuestions[0].question;
-licenceQuestions[0].textA;
-licenceQuestions[0].textB;
-licenceQuestions[0].textC;
-
+let question = document.getElementById("question");
+let answerDiv = document.getElementById("answer-div")
+let nextQuestion = document.getElementById("next-btn");
 let lastQuestionIndex = licenceQuestions.length - 1;
-let currentQuestionIndex = 0;
+let currentQuestionIndex;
+let shuffledQuestions;
+let score = 0;
 
-
+// This function will show the quiz area and render questions
 function showQuizArea() {
-    let q = licenceQuestions[currentQuestionIndex];
-    question.innerHTML = "<h2>" + q.question + "</h2>";
-    choiceA.innerHTML = q.choiceA;
-    choiceB.innerHTML = q.choiceB;
-    choiceC.innerHTML = q.choiceC; 
+    let questionDiv = document.getElementById("questn-container");
+    questionDiv.style.maxHeight = "1000px";
+    questionDiv.style.transitionDelay = "3s";
+    for (let i = 0; i < licenceQuestions.length; i++) {
+        let q =  licenceQuestions[i].question;
+        document.write(q);
+        let options = licenceQuestions[i].answer;
+        document.body.appendChild(document.createElement(""))
+    }
 }
 
-showQuizArea()
+
+function runQuiz() {
+    showQuizArea();
+    shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+}
+
 currentQuestionIndex++
 
 function resultArea() {
