@@ -14,9 +14,8 @@ const finalScore = document.getElementsByClassName("final-score-text")
 const username = document.getElementById("username").value;
 
 
+document.getElementById("start-btn").addEventListener("click", showQuizArea())
 
-let firstPage = document.getElementById("landing-page");
-firstPage.addEventListener ();
 
 // 
 function hideLandingPage(event) {
