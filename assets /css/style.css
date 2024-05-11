@@ -171,19 +171,17 @@ main {
     background-color: aqua;
 }
 
-/*---Home Next button renamed to start quiz in html and next question button */
+/*---Home Next button renamed to start quiz in html and next question button*/
 .next-btn {
     margin: 20px 60px;
     width: 100px;
     background-color: aquamarine;
 }
 
-.quiz-container
-
 
 /*---------------Landing page section*/
 #landing-page {
-    display: block;
+    display: none;
 }
 
 /*---------------Instruction area section*/
@@ -192,18 +190,23 @@ main {
 }
 
 /*---------------Question area section*/
-#hide-question-area {
-    display: none;
+#questn-container {
+    display: block;
 }
 
 /*---------------Result area section*/
-#hide-result-section {
+#result-container {
     display: none;
 }
 
 /*---------------Contact area section*/
 #contact-section {
     display: none;
+}
+
+
+.quiz-container {
+    display: block;
 }
 
 footer {

@@ -4,26 +4,46 @@ const questionAreaDiv = document.getElementById("questn-container");
 const currentQuestion = document.getElementsByClassName("current-question");
 const currentQuestionCount = document.getElementsByClassName("current-qstn-count");
 const questionDiv = document.getElementsByClassName("main-question-div");
-const questionText = document.getElementsByClassName("main-quest-text");
+const question = document.getElementById("question");
 const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
 const nextQuestion = document.getElementById("next-btn");
 const resultDiv = document.getElementById("result-container")
 const finalScore = document.getElementsByClassName("final-score-text")
+const username = document.getElementById("username").value;
 
 
+
+let firstPage = document.getElementById("landing-page");
+firstPage.addEventListener ();
+
+// 
 function nameValidation(event) {
     event.preventDefault();
-
-    const username = document.getElementById("username").value;
-
-    
+    firstPage.style.maxHeight = ("0");
+    showQuizArea() 
 }
 
-function quizArea() {
+licenceQuestions[0].question;
+licenceQuestions[0].textA;
+licenceQuestions[0].textB;
+licenceQuestions[0].textC;
 
+let lastQuestionIndex = licenceQuestions.length - 1;
+let currentQuestionIndex = 0;
+
+
+function showQuizArea() {
+    let q = licenceQuestions[currentQuestionIndex];
+    question.innerHTML = "<h2>" + q.question + "</h2>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC; 
 }
+
+showQuizArea()
+currentQuestionIndex++
 
 function resultArea() {
 
@@ -50,13 +70,13 @@ result.push(specificResult)
 
 
 
-const licenceQuestions = [
+let licenceQuestions = [
     {
         question: 'Your passenger wants to discuss something with you during the journey. what should you do?',
         answer: [
-            { text: "Concentrate on the discussion", correct: false },
-            { text: "Concentrate on the driving", correct: true },
-            { text: "Concentrate on both", correct: false },
+            { textA: "Concentrate on the discussion", correct: false },
+            { textB: "Concentrate on the driving", correct: true },
+            { textC: "Concentrate on both", correct: false },
         ]
     },
     {
