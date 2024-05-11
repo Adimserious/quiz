@@ -181,7 +181,7 @@ main {
 
 /*---------------Landing page section*/
 #landing-page {
-    display: none;
+    display: block;
 }
 
 /*---------------Instruction area section*/
@@ -202,11 +202,6 @@ main {
 /*---------------Contact area section*/
 #contact-section {
     display: none;
-}
-
-
-.quiz-container {
-    display: block;
 }
 
 footer {

@@ -19,11 +19,13 @@ let firstPage = document.getElementById("landing-page");
 firstPage.addEventListener ();
 
 // 
-function nameValidation(event) {
+function hideLandingPage(event) {
     event.preventDefault();
     firstPage.style.maxHeight = ("0");
     showQuizArea() 
 }
+
+hideLandingPage()
 
 licenceQuestions[0].question;
 licenceQuestions[0].textA;
