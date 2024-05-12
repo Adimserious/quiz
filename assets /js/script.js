@@ -1,5 +1,4 @@
 
-const start = document.getElementById("start-btn");
 const currentQuestion = document.getElementsByClassName("current-question");
 const currentQuestionCount = document.getElementsByClassName("current-qstn-count");
 
@@ -7,10 +6,6 @@ const currentQuestionCount = document.getElementsByClassName("current-qstn-count
 const resultDiv = document.getElementById("result-container")
 const finalScore = document.getElementsByClassName("final-score-text")
 const username = document.getElementById("username").value;
-
-// Add a click event listener to start button so that it takes user to quiz area once clicked
-document.getElementById("start-btn").addEventListener("click", showQuizArea());
-let firstPage = document.getElementById("landing-page");
 
 
 let question = document.getElementById("question");
@@ -22,17 +17,38 @@ let shuffledQuestions;
 let score = 0;
 
 // This function will show the quiz area and render questions
-function showQuizArea() {
+function showQuizArea(event) {
+    console.log(this.id)
     let questionDiv = document.getElementById("questn-container");
     questionDiv.style.maxHeight = "1000px";
     questionDiv.style.transitionDelay = "3s";
     for (let i = 0; i < licenceQuestions.length; i++) {
-        let q =  licenceQuestions[i].question;
+        let q = licenceQuestions[i].question;
         document.write(q);
         let options = licenceQuestions[i].answer;
-        document.body.appendChild(document.createElement(""))
+        document.body.appendChild(document.createElement("div"))
     }
 }
+
+// Function to validate username input and....
+// Add a click event listener to start button object so that it calls the showQuizArea function once clicked
+function handleSubmit(event) {
+    event.preventDefault();
+    let usernameValid = form.element["username"].value;
+
+    if (usernameValid > 12) {
+        let errorMessage = document.getElementById("error-msg");
+        errorMessage.innerHTML;
+    } else if (usernameValid = number) {
+        let errorMessageTwo = document.getElementById("error-msg2")
+        errorMessageTwo.innerHTML
+    } else {
+        let startBtn = document.getElementById("start-btn");
+        startBtn.addEventListener("click", showQuizArea());
+    }
+
+}
+
 
 
 function runQuiz() {
@@ -54,7 +70,7 @@ function sayName(myUsername, myScore) {
 }
 let nameAndScore = [
     {
-        username:finalScore
+        username: finalScore
     }
 ]
 let result = [];
@@ -62,9 +78,9 @@ let result = [];
 // a for loop and function call will take specific username argument
 for (let name of nameAndScore) {
     let specificResult = sayName();
-result.push(specificResult)
+    result.push(specificResult)
 }
- console.log("result")
+
 
 
 
