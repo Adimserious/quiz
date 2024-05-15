@@ -5,59 +5,18 @@ const currentQuestionCount = document.getElementsByClassName("current-qstn-count
 
 const resultDiv = document.getElementById("result-container")
 const finalScore = document.getElementsByClassName("final-score-text")
-const username = document.getElementById("username").value;
 
 
 let question = document.getElementById("question");
 let answerDiv = document.getElementById("answer-div")
 let nextQuestion = document.getElementById("next-btn");
-let lastQuestionIndex = licenceQuestions.length - 1;
-let currentQuestionIndex;
-let shuffledQuestions;
-let score = 0;
-
-// This function will show the quiz area and render questions
-function showQuizArea(event) {
-    console.log(this.id)
-    let questionDiv = document.getElementById("questn-container");
-    questionDiv.style.maxHeight = "1000px";
-    questionDiv.style.transitionDelay = "3s";
-    for (let i = 0; i < licenceQuestions.length; i++) {
-        let q = licenceQuestions[i].question;
-        document.write(q);
-        let options = licenceQuestions[i].answer;
-        document.body.appendChild(document.createElement("div"))
-    }
-}
-
-// Function to validate username input and....
-// Add a click event listener to start button object so that it calls the showQuizArea function once clicked
-function handleSubmit(event) {
-    event.preventDefault();
-    let usernameValid = form.element["username"].value;
-
-    if (usernameValid > 12) {
-        let errorMessage = document.getElementById("error-msg");
-        errorMessage.innerHTML;
-    } else if (usernameValid = number) {
-        let errorMessageTwo = document.getElementById("error-msg2")
-        errorMessageTwo.innerHTML
-    } else {
-        let startBtn = document.getElementById("start-btn");
-        startBtn.addEventListener("click", showQuizArea());
-    }
-
-}
 
 
 
-function runQuiz() {
-    showQuizArea();
-    shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
-    currentQuestionIndex = 0;
-}
 
-currentQuestionIndex++
+
+
+
 
 function resultArea() {
 
@@ -174,3 +133,58 @@ let licenceQuestions = [
         ]
     }
 ];
+
+
+// Function to validate username input and....
+// Add a click event listener to start button object so that it calls the showQuizArea function once clicked
+
+function handleClick(event) {
+    let form = document.getElementById("form");
+    let usernameInput = document.getElementById("username-input")
+
+    if (usernameInput > 12) {
+        let errorMessage = document.getElementById("error-msg");
+        errorMessage.innerHTML;
+    } else if (usernameInput === null) {
+        let errorMessageTwo = document.getElementById("error-msg2")
+        errorMessageTwo.innerHTML
+    } else {
+        let startBtn = document.getElementById("start-btn");
+        startBtn.addEventListener("click", showQuizArea());
+    }
+
+}
+console.log("yes")
+handleClick()
+
+// This function will show the quiz area and render questions
+function showQuizArea(event) {
+    let questionDiv = document.getElementById("questn-container");
+    questionDiv.style.display = "block"
+    questionDiv.style.maxHeight = "1000px";
+    questionDiv.style.transitionDelay = "3s";
+    runQuiz()
+}
+
+
+console.log("connected");
+
+function runQuiz() {
+    let currentQuestionIndex;
+    let shuffledQuestions;
+    let score = 0;
+    shuffledQuestions = licenceQuestions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+
+    for (let i = 0; i < licenceQuestions.length; i++) {
+        let q = licenceQuestions[i].question;
+        document.write(q);
+        let options = licenceQuestions[i].answer;
+        document.write(options);
+        document.body.appendChild(document.createElement("div"));
+
+        currentQuestionIndex++
+
+        console.log("connected from function")
+    }
+}

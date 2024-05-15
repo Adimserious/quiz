@@ -33,13 +33,13 @@
                     <p class="welcome">Welcome to the driving licence quiz</p>
                 </div>
                 <!--void 0 to prevent reload-->
-                <form method="post" action="javascript:void(0)" onsubmit="showQuizArea(event)">
+                <form id="form" method="post" action="javascript:void(0)" onsubmit="showQuizArea(event)">
                     <div id="username-text">
                         <p id="username-text-paragh">Please enter your name to continue</p>
                     </div>
                     <div class="input-username">
                         <label for="username"></label>
-                        <input type="text" placeholder="Username" id="username" name="username" maxlength="12" required>
+                        <input type="text" placeholder="Username" id="username-input" name="username" maxlength="12" required>
                         <p id="error-msg" class="user-msg">Username must not be greater than 12</p><br>
                         <p id="error-msg2" class="user-msg">Username must not be greater than 12</p><br>
                     </div>
