@@ -134,27 +134,30 @@ let licenceQuestions = [
     }
 ];
 
+let form = document.getElementById("form");
+let usernameInput = document.getElementById("username-input").value.length;
+let errorMessage = document.getElementById("error-msg");
+let startBtn = document.getElementById("start-btn");
+let landingPage = document.getElementById("landing-page");
 
 // Function to validate username input and....
 // Add a click event listener to start button object so that it calls the showQuizArea function once clicked
-let landingPage = document.getElementById("landing-page");
-function handleClick(event) {
-    
-    let form = document.getElementById("form");
-    let usernameInput = document.getElementById("username-input").value.length;
-    let errorMessage = document.getElementById("error-msg");
-    let startBtn = document.getElementById("start-btn");
 
-    if (usernameInput > 12) {
-        console.log("Username must not be greater than 12");
-        errorMessage.innerHTML = "Username must not be greater than 12"
-    } else if (usernameInput === null) {
-        errorMessage.innerHTML = "Username must not be empty";
-    } else {
-        errorMessage = "";
-        startBtn.addEventListener("click", showQuizArea());
-        console.log("handleclick")
-    }
+function handleClick(event) {
+     form.addEventListener("submit", (e)=>{
+        if (usernameInput.value === "" || usernameInput.value === null) {
+            console.log("Username must not be empty");
+            errorMessage.innerHTML = "Username must not be empty"
+        } else {
+            errorMessage = "";
+            e.preventDefault()
+            startBtn.addEventListener("click", showQuizArea());
+            console.log("connected")
+        }
+     })
+    
+    
+    
 
 }
 
@@ -163,11 +166,11 @@ handleClick()
 
 // This function will show the quiz area and render questions
 function showQuizArea() {
+    landingPage.style.display = "none"
     let questionDiv = document.getElementById("questn-container");
     questionDiv.style.display = "block";
     questionDiv.style.maxHeight = "1000px";
     questionDiv.style.transitionDelay = "3s";
-    //runQuiz();
     console.log("quizarea");
 }
 
