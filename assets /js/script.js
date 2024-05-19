@@ -137,37 +137,43 @@ let licenceQuestions = [
 
 // Function to validate username input and....
 // Add a click event listener to start button object so that it calls the showQuizArea function once clicked
-
+let landingPage = document.getElementById("landing-page");
 function handleClick(event) {
+    
     let form = document.getElementById("form");
-    let usernameInput = document.getElementById("username-input")
+    let usernameInput = document.getElementById("username-input").value.length
 
-    if (usernameInput > 12) {
+    if (usernameInput < 12) {
         let errorMessage = document.getElementById("error-msg");
-        errorMessage.innerHTML;
+        console.log(">Username must not be greater than 12")
+        errorMessage.innerHTML = "Username must not be greater than 12"
     } else if (usernameInput === null) {
         let errorMessageTwo = document.getElementById("error-msg2")
-        errorMessageTwo.innerHTML
+            errorMessageTwo.innerHTML
     } else {
+        errorMessage = "";
         let startBtn = document.getElementById("start-btn");
         startBtn.addEventListener("click", showQuizArea());
+        console.log("handleclick")
     }
 
 }
-console.log("yes")
+
 handleClick()
 
+
 // This function will show the quiz area and render questions
-function showQuizArea(event) {
+function showQuizArea() {
     let questionDiv = document.getElementById("questn-container");
-    questionDiv.style.display = "block"
+    questionDiv.style.display = "block";
     questionDiv.style.maxHeight = "1000px";
     questionDiv.style.transitionDelay = "3s";
-    runQuiz()
+    //runQuiz();
+    console.log("quizarea");
 }
 
 
-console.log("connected");
+
 
 function runQuiz() {
     let currentQuestionIndex;
@@ -185,6 +191,6 @@ function runQuiz() {
 
         currentQuestionIndex++
 
-        console.log("connected from function")
+        console.log("runquiz")
     }
 }
