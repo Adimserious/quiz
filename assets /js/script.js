@@ -141,18 +141,17 @@ let landingPage = document.getElementById("landing-page");
 function handleClick(event) {
     
     let form = document.getElementById("form");
-    let usernameInput = document.getElementById("username-input").value.length
+    let usernameInput = document.getElementById("username-input").value.length;
+    let errorMessage = document.getElementById("error-msg");
+    let startBtn = document.getElementById("start-btn");
 
-    if (usernameInput < 12) {
-        let errorMessage = document.getElementById("error-msg");
-        console.log(">Username must not be greater than 12")
+    if (usernameInput > 12) {
+        console.log("Username must not be greater than 12");
         errorMessage.innerHTML = "Username must not be greater than 12"
     } else if (usernameInput === null) {
-        let errorMessageTwo = document.getElementById("error-msg2")
-            errorMessageTwo.innerHTML
+        errorMessage.innerHTML = "Username must not be empty";
     } else {
         errorMessage = "";
-        let startBtn = document.getElementById("start-btn");
         startBtn.addEventListener("click", showQuizArea());
         console.log("handleclick")
     }
