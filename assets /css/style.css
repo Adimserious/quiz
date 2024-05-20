@@ -193,7 +193,13 @@ main {
 #questn-container {
     display: none;
 }
+.right {
+    background: green;
+}
 
+.wrong {
+    background: red;
+}
 /*---------------Result area section*/
 #result-container {
     display: none;
