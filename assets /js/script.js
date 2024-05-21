@@ -166,6 +166,7 @@ function renderQuiz() {
     })
 }
 
+// this will remove the next button and text content of the answer buttons 
 function resetQuiz() {
     nextButton.style.display = "none";
     while(answerDiv.firstChild){
